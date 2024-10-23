@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentors - SKYPATH</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .mentor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .mentor {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .mentor h2 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header hx-get="/templates/nav.html" hx-trigger="load" hx-swap="innerHTML">
+        <!-- The navigation content will be loaded here -->
+    </header>
+
+    <main>
+        <h1>Our Mentors</h1>
+        <p>Meet the experienced professionals who will guide you on your learning journey.</p>
+
+        <section class="mentor-list">
+            <article class="mentor">
+                <h2>John Doe</h2>
+                <p><strong>Expertise:</strong> Business Strategy, Marketing</p>
+                <p>John has over 15 years of experience in corporate strategy and digital marketing.</p>
+            </article>
+
+            <article class="mentor">
+                <h2>Jane Smith</h2>
+                <p><strong>Expertise:</strong> Finance, Accounting</p>
+                <p>Jane is a certified CPA with a background in investment banking and corporate finance.</p>
+            </article>
+
+            <article class="mentor">
+                <h2>Alex Johnson</h2>
+                <p><strong>Expertise:</strong> Technology, Innovation</p>
+                <p>Alex is a tech entrepreneur with multiple successful startups in the AI and machine learning space.</p>
+            </article>
+
+            <!-- Add more mentor articles as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SKYPATH. All rights reserved.</p>
+    </footer>
+</body>
+</html>
